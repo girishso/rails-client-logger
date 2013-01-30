@@ -22,7 +22,13 @@ Or install it yourself as:
 
 Includes a generator, simply execute following command in your rails project root. It inserts the required routes and javascript files.
 
-    rails g js_logger
+    $ rails g js_logger
+
+This will create:
+
+    route  mount JsLogger::Engine, :at => "logger"
+    require js_logger.js in app/assets/javascripts/application.js
+
 
 ### Logging a message
 
