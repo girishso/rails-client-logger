@@ -1,22 +1,22 @@
-(function( JSLogger, $, undefined ) {
+(function( jsLogger, $, undefined ) {
     //Public Method
-    JSLogger.debug = function(message) {
+    jsLogger.debug = function(message) {
 			invoke('debug', message);
     };
 
-    JSLogger.info = function(message) {
+    jsLogger.info = function(message) {
 			invoke('info', message);
     };
 
-    JSLogger.warn = function(message) {
+    jsLogger.warn = function(message) {
 			invoke('warn', message);
     };
 
-    JSLogger.error = function(message) {
+    jsLogger.error = function(message) {
 			invoke('error', message);
     };
 
-    JSLogger.fatal = function(message) {
+    jsLogger.fatal = function(message) {
 			invoke('fatal', message);
     };
 
@@ -31,4 +31,4 @@
 			  url: "/logger/js_logger/log"
 			})
     }   
-}( window.JSLogger = window.JSLogger || {}, jQuery ));
+}( window.jsLogger = window.jsLogger || {}, jQuery ));
