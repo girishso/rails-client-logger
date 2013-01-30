@@ -1,6 +1,6 @@
 # What this is for?
 
-Rails engine to log from Client side (Browser) javascript to server. Makes a global javascript variable available, 'jsLogger', which provides a variety of safe logging functions e.g. jsLogger.debug(), jsLogger.error().
+Rails engine to log from Client side (Browser) javascript to server log file. Makes a global javascript variable available, 'jsLogger', which provides a variety of safe logging functions e.g. jsLogger.debug(), jsLogger.error().
 
 There are 5 levels of logging: debug, info, warn, error and fatal.
 
@@ -20,6 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
+Includes a generator, simply execute following command in your rails project root. It inserts the required routes and javascript files.
+
+    rails g js_logger
+
+### Logging a message
+
+    jsLogger.info("simple info message");
+    jsLogger.warn("a warning");
+
+### Log Error
+
+    try {
+        throw new Error('unhandled exception');
+    }
+    catch (e) {
+        jsLogger.fatal(e);
+    }
 
 ## Contributing
 
@@ -29,7 +46,7 @@ Or install it yourself as:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## Licence
+## License
 MIT License
 
 Copyright (c) 2013 Girish Sonawane (girish dot sonawane at gmail dot com)
