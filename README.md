@@ -14,11 +14,15 @@ gem 'js-logger'
     
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Then simply execute following generator command. It inserts the required routes and javascript files and you're ready to rock!
 
-    $ rails g js_logger
+```bash
+$ rails g js_logger
+```
 
 ## Usage
 
