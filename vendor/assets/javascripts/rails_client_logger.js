@@ -28,7 +28,7 @@
 				beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
 			  data: {level: level, message: message},
 			  complete: function(request){},
-			  url: "/logger/js_logger/log"
+			  url: "/logger/rails_client_logger/log"
 			})
     }   
 }( window.jsLogger = window.jsLogger || {}, jQuery ));

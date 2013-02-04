@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount JsLogger::Engine => "/js-logger"
+  mount RailsClientLogger::Engine => "/js-logger"
 end

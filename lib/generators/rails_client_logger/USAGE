@@ -1,0 +1,9 @@
+Description:
+    Inserts required routes and requires the javascript files
+
+Example:
+    rails generate rails_client_logger
+
+    This will create:
+        route  mount RailsClientLogger::Engine, :at => "logger"
+        require rails_client_logger.js in app/assets/javascripts/application.js

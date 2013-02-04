@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "js-logger/version"
+require "rails-client-logger/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "js-logger"
-  s.version     = JsLogger::VERSION
+  s.name        = "rails-client-logger"
+  s.version     = RailsClientLogger::VERSION
   s.authors     = ["Girish Sonawane"]
   s.email       = ["girish.sonawane@gmail.com"]
   s.homepage    = "https://github.com/girishso/js-logger"
