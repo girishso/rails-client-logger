@@ -1,6 +1,6 @@
 # What is that for?
 
-Rails engine to log from Client side (Browser) javascript to server log file. To catch those nasty production Javascript errors. Makes a global javascript variable available, 'jsLogger', which provides a variety of safe logging functions e.g. jsLogger.debug(), jsLogger.error().
+Rails engine to log from Client side (Browser) javascript to server log file. To catch those nasty production Javascript errors. Provides a variety of safe logging functions e.g. jsLogger.debug(), jsLogger.error().
 
 There are 5 levels of logging: debug, info, warn, error and fatal.
 
@@ -9,7 +9,7 @@ There are 5 levels of logging: debug, info, warn, error and fatal.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'js-logger'
+gem 'rails-client-logger'
 ```
     
 And then execute:
@@ -21,7 +21,7 @@ $ bundle
 Then simply execute following generator command. It inserts the required routes and javascript files and you're ready to rock!
 
 ```bash
-$ rails g js_logger
+$ rails g rails_client_logger
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ catch (e) {
 
 ## Credits
 
-[Meghali](https://github.com/Meghali) - for the idea
+[meghali](https://github.com/Meghali) - for the idea
 
 [girishso](https://github.com/girishso) - for the implementation
 
