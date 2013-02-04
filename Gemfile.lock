@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    js-logger (0.0.1)
+    rails-client-logger (0.0.1)
       rails (~> 3.2.9)
 
 GEM
@@ -94,5 +94,5 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
-  js-logger!
+  rails-client-logger!
   sqlite3
