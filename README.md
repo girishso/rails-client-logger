@@ -15,7 +15,7 @@ gem 'rails-client-logger'
 And then execute:
 
 ```bash
-$ bundle
+$ bundle install
 ```
 
 Then simply execute following generator command. It inserts the required routes and javascript files and you're ready to rock!
@@ -43,7 +43,39 @@ catch (e) {
     jsLogger.fatal(e);
 }
 ```
-    
+
+Log all unhandled javascript errors:
+
+```coffee
+window.onerror = (message, url, line_number) ->
+  jsLogger.fatal("Uncaught errror in: #{url}:#{line_number}\nDetails: #{message}")
+```
+
+### View Logs
+
+The logged messages will appear in the normal rails log (i.e. development.log or staging.log or production.log).
+
+## Authorization
+
+The gem uses a controller to send messages to the server, in some cases you may need to authorize the controller actions for it to work correctly (otherwise you will get an authorization error). Below is a how-to guide for CanCan, but the same principles can be applied to other authorization gems.
+
+### CanCan
+
+1. Create a new controller `logger_controller.rb` that inherits from `RailsClientLoggersController` like this:
+
+```ruby
+class LoggerController < RailsClientLogger::RailsClientLoggersController
+  skip_authorization_check
+end
+```
+
+2. Add a new route in `routes.rb`
+
+```ruby
+match 'logger/rails_client_logger/log' => 'logger#log'
+mount RailsClientLogger::Engine, :at => "logger"
+```
+
 ## Contributing
 
 1. Fork it
