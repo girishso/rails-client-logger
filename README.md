@@ -46,9 +46,10 @@ catch (e) {
 
 Log all unhandled javascript errors:
 
-```coffee
-window.onerror = (message, url, line_number) ->
-  jsLogger.fatal("Uncaught errror in: #{url}:#{line_number}\nDetails: #{message}")
+```javascript
+window.onerror = function (message, url, line_number) {
+  jsLogger.fatal("Uncaught errror in: " + url + ":" + line_number + "\nDetails: " + message);
+};
 ```
 
 ### View Logs
