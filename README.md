@@ -64,18 +64,18 @@ The gem uses a controller to send messages to the server, in some cases you may 
 
 1. Create a new controller `logger_controller.rb` that inherits from `RailsClientLoggersController` like this:
 
-```ruby
-class LoggerController < RailsClientLogger::RailsClientLoggersController
-  skip_authorization_check
-end
-```
+    ```ruby
+    class LoggerController < RailsClientLogger::RailsClientLoggersController
+      skip_authorization_check
+    end
+    ```
 
 2. Add a new route in `routes.rb`
 
-```ruby
-match 'logger/rails_client_logger/log' => 'logger#log'
-mount RailsClientLogger::Engine, :at => "logger"
-```
+    ```ruby
+    match 'logger/rails_client_logger/log' => 'logger#log'
+    mount RailsClientLogger::Engine, :at => "logger"
+    ```
 
 ## Contributing
 
