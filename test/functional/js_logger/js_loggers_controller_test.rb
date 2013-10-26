@@ -6,6 +6,6 @@ module JsLogger
       get :log
       assert_response :success
     end
-  
+
   end
 end

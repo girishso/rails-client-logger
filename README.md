@@ -1,3 +1,8 @@
+# About this fork
+
+This forks adds Rails 4 support (permitted parameters) as well as a
+CoffeeScript implementation of the client-side code.
+
 # What is that for?
 
 Rails engine to log from Client side (Browser) javascript to server log file. To catch those nasty production Javascript errors. Provides a variety of safe logging functions e.g. jsLogger.debug(), jsLogger.error().
@@ -11,7 +16,7 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'rails-client-logger'
 ```
-    
+
 And then execute:
 
 ```bash
@@ -32,7 +37,7 @@ $ rails g rails_client_logger
 jsLogger.info("simple info message");
 jsLogger.warn("a warning");
 ```
-    
+
 ### Log Error
 
 ```ruby

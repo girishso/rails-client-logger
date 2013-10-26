@@ -8,5 +8,9 @@ module RailsClientLogger
         head :bad_request
       end
     end
+
+    def log_params
+      params.permit(:level, :message)
+    end
   end
 end
