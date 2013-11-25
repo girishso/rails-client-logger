@@ -8,6 +8,8 @@ Supports Rails 4 (permitted parameters) as well as a CoffeeScript implementation
 
 For Rails 3.x use gem version `0.0.2`.
 
+[![Gem Version](https://badge.fury.io/rb/rails-client-logger.png)](http://badge.fury.io/rb/rails-client-logger)
+
 ## Installation
 
 Add this line to your application's Gemfile:

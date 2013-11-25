@@ -24,6 +24,7 @@ class RailsClientLoggerGenerator < Rails::Generators::Base
       if mode == :coffee
         insert_into_file path, :after => %r{#= require ['"]?jquery['"]?\s*$} do
           "\n#= require rails_client_logger"
+        end
       else
         insert_into_file path, :after => %r{//= require ['"]?jquery['"]?\s*$} do
           "\n//= require rails_client_logger"
