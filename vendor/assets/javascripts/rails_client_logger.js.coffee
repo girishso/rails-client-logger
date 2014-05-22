@@ -10,6 +10,18 @@ window.jsLogger =
       url: "/logger/rails_client_logger/log"
     }
 
-for level in ['debug', 'info', 'warn', 'error', 'fatal']
-  jsLogger[level] = (msg) ->
-    jsLogger.invoke(level, msg)
+  debug: (message) ->
+        @invoke('debug', message)
+
+  info: (message) ->
+        @invoke('info', message)
+
+  warn: (message) ->
+        @invoke('warn', message)
+
+  error: (message) ->
+        @invoke('error', message)
+
+  fatal: (message) ->
+        @invoke('fatal', message)
+
