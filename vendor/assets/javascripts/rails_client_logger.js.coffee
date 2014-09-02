@@ -1,3 +1,4 @@
+window.jsLoggerBasePath ||= ''
 window.jsLogger =
   invoke: (level, message) ->
     jQuery.ajax {
@@ -7,7 +8,7 @@ window.jsLogger =
       data: {level: level, message: message}
       complete: (request) ->
         # Nothing yet
-      url: "/logger/rails_client_logger/log"
+      url: "#{window.jsLoggerBasePath}/logger/rails_client_logger/log"
     }
 
   debug: (message) ->
