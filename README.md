@@ -4,7 +4,10 @@ Rails engine to log from Client side (Browser) javascript to server log file. To
 
 There are 5 levels of logging: debug, info, warn, error and fatal.
 
-Supports Rails 4 (permitted parameters) as well as a CoffeeScript implementation of the client-side code.
+If [exception_notification](https://github.com/smartinez87/exception_notification) is found, sends
+notifications for `error` and `fatal` levels.
+
+Supports Rails 4 (permitted parameters).
 
 For Rails 3.x use gem version `0.0.2`.
 
