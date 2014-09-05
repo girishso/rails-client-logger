@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails-client-logger (1.0.3)
+    rails-client-logger (1.1.0)
       rails (>= 4.0)
 
 GEM
