@@ -89,6 +89,27 @@ The gem uses a controller to send messages to the server, in some cases you may 
     mount RailsClientLogger::Engine, :at => "logger"
     ```
 
+## Namespaced Logger URL
+
+In case you need more flexibility with the url handling, for example if you have an API only app.
+
+1. Modify routes.rb to include namespaced API routes
+
+```ruby
+namespace :api do
+  namespace :v1 do
+    mount RailsClientLogger::Engine, :at => "apilogger"
+  end
+end
+```
+
+2. Specify global vars like
+
+```javascript
+window.jsLoggerBasePath = "/api/v1"
+window.jsLoggerUrl = "/apilogger/rails_client_logger/log"
+```
+
 ## Contributing
 
 1. Fork it
@@ -106,8 +127,9 @@ The gem uses a controller to send messages to the server, in some cases you may 
 [elthariel](https://github.com/elthariel) - for Rails 4 support and CoffeeScript
 implementation
 
+[rhino232](https://github.com/rhino232) - for namespaced URLs
+
 ## License
 MIT License
 
 Copyright (c) 2013 Girish Sonawane (girish dot sonawane at gmail dot com)
-
