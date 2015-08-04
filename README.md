@@ -63,7 +63,7 @@ Log all unhandled javascript errors:
 
 ```javascript
 window.onerror = function (message, url, line_number) {
-  jsLogger.fatal("Uncaught errror in: " + url + ":" + line_number + "\nDetails: " + message);
+  jsLogger.fatal("Uncaught error in: " + url + ":" + line_number + "\nDetails: " + message);
 };
 ```
 
