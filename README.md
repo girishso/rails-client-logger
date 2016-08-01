@@ -88,7 +88,7 @@ The gem uses a controller to send messages to the server, in some cases you may 
 2. Add a new route in `routes.rb`
 
     ```ruby
-    match 'logger/rails_client_logger/log' => 'logger#log'
+    match 'logger/rails_client_logger/log' => 'logger#log', via: :post
     mount RailsClientLogger::Engine, :at => "logger"
     ```
 
